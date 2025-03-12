@@ -45,30 +45,22 @@
                 </a>
 
                 <div id="on-luyen"
-                    class="collapse {{ Route::currentRouteName() === 'admin.products.create' ? 'show' : '' }} {{ Route::currentRouteName() === 'admin.products.index' ? 'show' : '' }} {{ Route::currentRouteName() === 'admin.categories.index' ? 'show' : '' }}"
+                    class="collapse {{ Route::currentRouteName() === 'admin.orders.create' ? 'show' : '' }} {{ Route::currentRouteName() === 'admin.orders.index' ? 'show' : '' }}"
                     data-bs-parent="#sideNavbar">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link nav-link  nav-item {{ Route::currentRouteName() === 'admin.products.index' ? 'active' : '' }}"
-                                href="{{ route('admin.products.index') }}">
+                            <a class="nav-link nav-link  nav-item {{ Route::currentRouteName() === 'admin.orders.index' ? 'active' : '' }}"
+                                href="{{ route('admin.orders.index') }}">
                                 Tất cả đơn hàng
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link  nav-item {{ Route::currentRouteName() === 'admin.products.create' ? 'active' : '' }}"
+                            <a class="nav-link nav-link  nav-item {{ Route::currentRouteName() === 'admin.orders.create' ? 'active' : '' }}"
                                 
-                                href="{{ route('admin.products.create') }}">
+                                href="{{ route('admin.orders.create') }}">
                                 Thêm sản đơn hàng
                             </a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link nav-link  nav-item {{ Route::currentRouteName() === 'admin.categories.index' ? 'active' : '' }}"
-                                href="{{ route('admin.categories.index') }}">
-                                Danh mục
-                            </a>
-                        </li>
-
                     </ul>
                 </div>
             </li>

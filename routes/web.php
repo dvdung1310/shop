@@ -5,6 +5,7 @@ use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\ProductController;
 use App\Http\Controllers\backend\AuthController;
 use App\Http\Controllers\backend\UserAffiliatesController;
+use App\Http\Controllers\backend\OrderController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\frontend\ProductFrontendController;
 use App\Http\Controllers\frontend\AuthFrontendController;
@@ -35,6 +36,16 @@ Route::prefix('admin')->group(function () {
         Route::delete('/destroy/{id}', [ProductController::class, 'destroy'])->name('destroy');
     });
 
+
+    Route::prefix('orders')->name('admin.orders.')->group(function () {
+        Route::get('/', [OrderController::class, 'index'])->name('index');
+        Route::get('/show/{id}', [OrderController::class, 'show'])->name('show');
+        Route::get('/create', [OrderController::class, 'create'])->name('create');
+        Route::post('/store', [OrderController::class, 'store'])->name('store');
+        Route::get('/edit/{id}', [OrderController::class, 'edit'])->name('edit');
+        Route::post('/update/{id}', [OrderController::class, 'update'])->name('update');
+        Route::delete('/destroy/{id}', [OrderController::class, 'destroy'])->name('destroy');
+    });
     });
 });
 
